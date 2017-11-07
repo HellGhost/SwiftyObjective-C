@@ -19,9 +19,9 @@
 
 - (void)setUp {
     [super setUp];
-    StudentTest *first = [[StudentTest alloc] initWithName:@"Mark" age:17];
-    StudentTest *second = [[StudentTest alloc] initWithName:@"Steve" age:17];
-    StudentTest *third = [[StudentTest alloc] initWithName:@"Kurt" age:18];
+    let first = [[StudentTest alloc] initWithName:@"Mark" age:17];
+    let second = [[StudentTest alloc] initWithName:@"Steve" age:17];
+    let third = [[StudentTest alloc] initWithName:@"Kurt" age:18];
 
     self.students = [NSMutableArray arrayWithArray:@[first, second, third]];
 }
@@ -32,25 +32,25 @@
 }
 
 - (void)testMap {
-    NSArray *testData = @[@"Mark", @"Steve", @"Kurt"];
+    let testData = @[@"Mark", @"Steve", @"Kurt"];
 
-    NSArray *studentsNames = [self.students map:^NSString *(StudentTest *student) {
+    let studentsNames = [self.students map:^NSString *(StudentTest *student) {
         return student.name;
     }];
 
     XCTAssertTrue(testData.count == studentsNames.count, @"Same count");
 
-    NSString *testResult = [testData componentsJoinedByString:@""];
-    NSString *mapResult = [studentsNames componentsJoinedByString:@""];
+    let testResult = [testData componentsJoinedByString:@""];
+    let mapResult = [studentsNames componentsJoinedByString:@""];
 
     XCTAssertTrue([testResult isEqualToString:mapResult], "Must be the same");
 }
 
 - (void)testFlatMap {
-    StudentTest *withoutName = [[StudentTest alloc] initWithName:nil age:18];
+    let withoutName = [[StudentTest alloc] initWithName:nil age:18];
     [self.students addObject:withoutName];
 
-    NSArray *studentsNames = [self.students flatMap:^NSString *(StudentTest *student) {
+    let studentsNames = [self.students flatMap:^NSString *(StudentTest *student) {
         return student.name;
     }];
 
@@ -58,16 +58,16 @@
 
     XCTAssertTrue(studentsNames.count == 3, "must be 3 students exclude last");
 
-    NSArray *testData = @[@"Mark", @"Steve", @"Kurt"];
+    let testData = @[@"Mark", @"Steve", @"Kurt"];
 
-    NSString *testResult = [testData componentsJoinedByString:@""];
-    NSString *mapResult = [studentsNames componentsJoinedByString:@""];
+    let testResult = [testData componentsJoinedByString:@""];
+    let mapResult = [studentsNames componentsJoinedByString:@""];
 
     XCTAssertTrue([testResult isEqualToString:mapResult], "Must be the same");
 }
 
 - (void)testFilter {
-    NSArray <StudentTest *>*filteredStudents = [self.students filter:^BOOL(StudentTest *student) {
+    NSArray <StudentTest *> *filteredStudents = [self.students filter:^BOOL(StudentTest *student) {
         return student.age >= 18;
     }];
 

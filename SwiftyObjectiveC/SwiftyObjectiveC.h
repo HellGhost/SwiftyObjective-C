@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+#define let __auto_type const
+#define var __auto_type
+
 //! Project version number for SwiftyObjectiveC.
 FOUNDATION_EXPORT double SwiftyObjectiveCVersionNumber;
 
@@ -15,7 +18,5 @@ FOUNDATION_EXPORT double SwiftyObjectiveCVersionNumber;
 FOUNDATION_EXPORT const unsigned char SwiftyObjectiveCVersionString[];
 
 #import "NSArray+Transforming.h"
-
-// In this header, you should import all the public headers of your framework using statements like #import <SwiftyObjectiveC/PublicHeader.h>
 
 

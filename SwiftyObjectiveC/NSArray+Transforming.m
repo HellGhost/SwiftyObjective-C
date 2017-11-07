@@ -1,9 +1,9 @@
 //
 //  NSArray+Transforming.m
-//  TestObj-C
+//  SwiftyObjectiveC
 //
 //  Created by Yerofieiev, Vladyslav on 11/7/17.
-//  Copyright © 2017 Yerofieiev, Vladyslav. All rights reserved.
+//  Copyright © 2017 Hell_Ghost. All rights reserved.
 //
 
 #import "NSArray+Transforming.h"
