@@ -18,6 +18,18 @@
     return [[NSArray alloc] initWithArray:result];
 }
 
+- (NSArray * _Nonnull )flatMap:(_Nonnull MapCallblock)callblock {
+    NSMutableArray *result = [NSMutableArray new];
+    for (id object in self) {
+        id mapObject = callblock(object);
+        if (mapObject != nil) {
+            [result addObject:callblock(object)];
+        }
+    }
+
+    return [[NSArray alloc] initWithArray:result];
+}
+
 - (NSArray * _Nonnull )filter:(_Nonnull FilterCallblock)callblock {
     NSMutableArray *result = [NSMutableArray new];
     for (id object in self) {

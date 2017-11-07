@@ -13,5 +13,7 @@ typedef BOOL (^FilterCallblock)(_Nonnull id object);
 
 @interface NSArray(Transforming)
 - (NSArray * _Nonnull )map:(_Nonnull MapCallblock)callblock;
+- (NSArray * _Nonnull )flatMap:(_Nonnull MapCallblock)callblock;
+
 - (NSArray * _Nonnull )filter:(_Nonnull FilterCallblock)callblock;
 @end
