@@ -8,8 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		DA85CE851FB1F0E200FA990A /* SwiftyObjectiveC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA85CE7B1FB1F0E200FA990A /* SwiftyObjectiveC.framework */; };
-		DA85CE8A1FB1F0E200FA990A /* SwiftyObjectiveCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DA85CE891FB1F0E200FA990A /* SwiftyObjectiveCTests.m */; };
 		DA85CE8C1FB1F0E200FA990A /* SwiftyObjectiveC.h in Headers */ = {isa = PBXBuildFile; fileRef = DA85CE7E1FB1F0E200FA990A /* SwiftyObjectiveC.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA85CE971FB1F1EB00FA990A /* NSArray+Transforming.m in Sources */ = {isa = PBXBuildFile; fileRef = DA85CE951FB1F1EB00FA990A /* NSArray+Transforming.m */; };
+		DA85CE981FB1F1EB00FA990A /* NSArray+Transforming.h in Headers */ = {isa = PBXBuildFile; fileRef = DA85CE961FB1F1EB00FA990A /* NSArray+Transforming.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA85CE9B1FB1F24300FA990A /* StudentTest.m in Sources */ = {isa = PBXBuildFile; fileRef = DA85CE9A1FB1F24300FA990A /* StudentTest.m */; };
+		DA85CE9D1FB1F31E00FA990A /* SwiftyObjectiveCArrayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DA85CE9C1FB1F31E00FA990A /* SwiftyObjectiveCArrayTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,8 +30,12 @@
 		DA85CE7E1FB1F0E200FA990A /* SwiftyObjectiveC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftyObjectiveC.h; sourceTree = "<group>"; };
 		DA85CE7F1FB1F0E200FA990A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA85CE841FB1F0E200FA990A /* SwiftyObjectiveCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftyObjectiveCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DA85CE891FB1F0E200FA990A /* SwiftyObjectiveCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwiftyObjectiveCTests.m; sourceTree = "<group>"; };
 		DA85CE8B1FB1F0E200FA990A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA85CE951FB1F1EB00FA990A /* NSArray+Transforming.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Transforming.m"; sourceTree = "<group>"; };
+		DA85CE961FB1F1EB00FA990A /* NSArray+Transforming.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Transforming.h"; sourceTree = "<group>"; };
+		DA85CE991FB1F24300FA990A /* StudentTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudentTest.h; sourceTree = "<group>"; };
+		DA85CE9A1FB1F24300FA990A /* StudentTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudentTest.m; sourceTree = "<group>"; };
+		DA85CE9C1FB1F31E00FA990A /* SwiftyObjectiveCArrayTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwiftyObjectiveCArrayTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +79,8 @@
 			isa = PBXGroup;
 			children = (
 				DA85CE7E1FB1F0E200FA990A /* SwiftyObjectiveC.h */,
+				DA85CE961FB1F1EB00FA990A /* NSArray+Transforming.h */,
+				DA85CE951FB1F1EB00FA990A /* NSArray+Transforming.m */,
 				DA85CE7F1FB1F0E200FA990A /* Info.plist */,
 			);
 			path = SwiftyObjectiveC;
@@ -80,7 +89,9 @@
 		DA85CE881FB1F0E200FA990A /* SwiftyObjectiveCTests */ = {
 			isa = PBXGroup;
 			children = (
-				DA85CE891FB1F0E200FA990A /* SwiftyObjectiveCTests.m */,
+				DA85CE9C1FB1F31E00FA990A /* SwiftyObjectiveCArrayTests.m */,
+				DA85CE991FB1F24300FA990A /* StudentTest.h */,
+				DA85CE9A1FB1F24300FA990A /* StudentTest.m */,
 				DA85CE8B1FB1F0E200FA990A /* Info.plist */,
 			);
 			path = SwiftyObjectiveCTests;
@@ -94,6 +105,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA85CE8C1FB1F0E200FA990A /* SwiftyObjectiveC.h in Headers */,
+				DA85CE981FB1F1EB00FA990A /* NSArray+Transforming.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +207,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA85CE971FB1F1EB00FA990A /* NSArray+Transforming.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,7 +215,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA85CE8A1FB1F0E200FA990A /* SwiftyObjectiveCTests.m in Sources */,
+				DA85CE9B1FB1F24300FA990A /* StudentTest.m in Sources */,
+				DA85CE9D1FB1F31E00FA990A /* SwiftyObjectiveCArrayTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
