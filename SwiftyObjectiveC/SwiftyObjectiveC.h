@@ -18,5 +18,5 @@ FOUNDATION_EXPORT double SwiftyObjectiveCVersionNumber;
 FOUNDATION_EXPORT const unsigned char SwiftyObjectiveCVersionString[];
 
 #import "NSArray+Transforming.h"
-
+#import "NSDictionary+Trasnsforming.h"
 

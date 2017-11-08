@@ -12,7 +12,7 @@
 
 
 @interface SwiftyObjectiveCArrayTests : XCTestCase
-@property (nonatomic, strong) NSMutableArray *students;
+@property (nonatomic, strong) NSMutableArray <StudentTest *> *students;
 @end
 
 @implementation SwiftyObjectiveCArrayTests

@@ -9,31 +9,32 @@
 #import "NSArray+Transforming.h"
 
 @implementation NSArray(Transforming)
-- (NSArray *)map:(MapCallblock)callblock {
+
+- (NSArray * _Nonnull )map:(_Nonnull MapCallblock)transform {
     NSMutableArray *result = [NSMutableArray new];
     for (id object in self) {
-        [result addObject:callblock(object)];
+        [result addObject:transform(object)];
     }
     
     return [[NSArray alloc] initWithArray:result];
 }
 
-- (NSArray * _Nonnull )flatMap:(_Nonnull MapCallblock)callblock {
+- (NSArray * _Nonnull )flatMap:(_Nonnull MapCallblock)transform{
     NSMutableArray *result = [NSMutableArray new];
     for (id object in self) {
-        id mapObject = callblock(object);
+        id mapObject = transform(object);
         if (mapObject != nil) {
-            [result addObject:callblock(object)];
+            [result addObject:mapObject];
         }
     }
 
     return [[NSArray alloc] initWithArray:result];
 }
 
-- (NSArray * _Nonnull )filter:(_Nonnull FilterCallblock)callblock {
+- (NSArray * _Nonnull )filter:(_Nonnull FilterCallblock)isIncluded {
     NSMutableArray *result = [NSMutableArray new];
     for (id object in self) {
-        if (callblock(object) == YES) {
+        if (isIncluded(object) == YES) {
             [result addObject:object];
         }
     }
